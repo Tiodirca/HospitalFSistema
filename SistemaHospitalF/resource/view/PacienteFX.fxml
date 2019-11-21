@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ed5269; -fx-border-width: 4px; -fx-border-color: #940008;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.hospitalif.controller.PacienteControler">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="128.0" style="-fx-background-color: #760006; -fx-background-radius: 0 15 15 0;" />
+      <Button fx:id="ButtonConfirmar" layoutX="474.0" layoutY="343.0" mnemonicParsing="false" onAction="#Confirmar" prefHeight="43.0" prefWidth="117.0" style="-fx-background-color: #ce0018;" text="Confirmar" textFill="#dadada" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="buttonLimpar" layoutX="253.0" layoutY="360.0" mnemonicParsing="false" onAction="#Limpar" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #ce0018;" text="Limpar" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="128.0" layoutY="105.0" text="Historico :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextArea fx:id="txtHistorico" layoutX="193.0" layoutY="105.0" prefHeight="158.0" prefWidth="147.0" promptText="Historico">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextArea>
+      <Button fx:id="buttonVoltar" layoutX="136.0" layoutY="360.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #ce0018;" text="Voltar" textFill="#f5f5f5" textOverrun="CLIP">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="18.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PACIENTE" textAlignment="CENTER" wrappingWidth="137.09765625">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtNome" cacheShape="false" layoutX="195.0" layoutY="22.0" prefHeight="25.0" prefWidth="392.0" promptText="Nome" scaleShape="false">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="txtCPF" layoutX="452.0" layoutY="69.0" prefHeight="25.0" prefWidth="137.0" promptText="CPF">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="txtIdade" layoutX="452.0" layoutY="106.0" prefHeight="25.0" prefWidth="137.0" promptText="Idade">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="txtStatusPessoa" layoutX="452.0" layoutY="228.0" prefHeight="25.0" prefWidth="137.0" promptText="Status de Pessoa">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="149.0" layoutY="24.0" text="Nome :" textFill="#f2f0f0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="413.0" layoutY="71.0" text="CPF :" textFill="#f2ecec">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="406.0" layoutY="109.0" text="Idade :" textFill="#f2f2f2">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="345.0" layoutY="148.0" text="Tipo Sanguineo :" textFill="#fffefe">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="341.0" layoutY="230.0" text="Status de pessoa :" textFill="#fffefe">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="412.0" layoutY="188.0" text="Sexo :" textFill="#f5f2f2">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTipoSanguineo" layoutX="452.0" layoutY="145.0" prefHeight="25.0" prefWidth="137.0" promptText="Tipo sanguineo" />
+      <TextField fx:id="txtSexo" layoutX="452.0" layoutY="185.0" prefHeight="25.0" prefWidth="137.0" promptText="Sexo" />
+      <TextField fx:id="txtDoenca" layoutX="196.0" layoutY="68.0" prefHeight="25.0" prefWidth="176.0" promptText="Doenca">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="141.0" layoutY="71.0" text="Doença :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonLista" layoutX="372.0" layoutY="360.0" mnemonicParsing="false" onAction="#lista" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #ce0018;" text="Ver Lista" textFill="#dadada" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</Pane>

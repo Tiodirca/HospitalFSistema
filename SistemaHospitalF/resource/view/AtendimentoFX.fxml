@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="798.0" style="-fx-background-color: #ed5269; -fx-border-color: #940008; -fx-border-width: 4px;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.hospitalif.controller.AtendimentoControler">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="400.0" prefWidth="128.0" style="-fx-background-color: #760006; -fx-background-radius: 0 15 15 0;" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="-1.0">
+         <children>
+            <Text fill="WHITE" layoutX="-5.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ATENDIMENTO" textAlignment="CENTER" wrappingWidth="137.09765625">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <TextField fx:id="txtDoenca" layoutX="311.0" layoutY="237.0" prefHeight="25.0" prefWidth="208.0" promptText="Doenca" AnchorPane.topAnchor="237.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="txtAltura" layoutX="311.0" layoutY="199.0" prefHeight="25.0" prefWidth="208.0" promptText="Altura">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="txtPeso" layoutX="311.0" layoutY="275.0" prefHeight="25.0" prefWidth="208.0" promptText="Peso">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Button fx:id="btnFinalizar" layoutX="685.0" layoutY="336.0" mnemonicParsing="false" onAction="#confirmar" prefHeight="50.0" prefWidth="91.0" style="-fx-background-color: #ce0018;" text="Finalizar" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="22.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnLimpar" layoutX="474.0" layoutY="354.0" mnemonicParsing="false" onAction="#limpar" prefHeight="32.0" prefWidth="91.0" style="-fx-background-color: #ce0018;" text="Limpar" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="233.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="132.0" layoutY="18.0" text="Comentario do Enfermeiro :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="153.0" layoutY="96.0" text="Comentario do Médico :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="262.0" layoutY="278.0" text="Peso :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="259.0" layoutY="202.0" text="Altura :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="262.0" layoutY="164.0" text="Data :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="257.0" layoutY="240.0" text="Doença:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="txtDate" layoutX="311.0" layoutY="161.0" prefHeight="25.0" prefWidth="208.0" promptText="Data">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </DatePicker>
+      <TextArea fx:id="txtComEnfermeiro" layoutX="311.0" layoutY="18.0" prefHeight="61.0" prefWidth="307.0" promptText="Comentario do Enfermeiro">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextArea>
+      <TextArea fx:id="txtComMedico" layoutX="311.0" layoutY="92.0" prefHeight="61.0" prefWidth="307.0" promptText="Comentario do Medico">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextArea>
+      <Button fx:id="btnVoltar" layoutX="144.0" layoutY="354.0" mnemonicParsing="false" onAction="#back" prefHeight="32.0" prefWidth="91.0" style="-fx-background-color: #ce0018;" text="Voltar" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="144.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnLista" layoutX="583.0" layoutY="354.0" mnemonicParsing="false" onAction="#Lista" prefHeight="32.0" prefWidth="91.0" style="-fx-background-color: #ce0018;" text="Ver Lista" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="124.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

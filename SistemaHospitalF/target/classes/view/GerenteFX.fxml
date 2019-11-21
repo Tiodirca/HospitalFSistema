@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="798.0" style="-fx-background-color: #ed5269; -fx-border-color: #940008; -fx-border-width: 4px;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.hospitalif.controller.GerenteControler">
+   <children>
+      <Pane layoutY="-3.0" prefHeight="400.0" prefWidth="128.0" style="-fx-background-color: #760006; -fx-background-radius: 0 15 15 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Button fx:id="ButtonConfirmar" layoutX="693.0" layoutY="351.0" mnemonicParsing="false" onAction="#confirmar" prefHeight="39.0" prefWidth="91.0" style="-fx-background-color: #ce0018;" text="Confirmar" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="14.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="ButtonLimpar" layoutX="460.0" layoutY="370.0" mnemonicParsing="false" onAction="#limpar" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #ce0018;" text="Limpar" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="228.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="164.0" layoutY="315.0" text="Cargo :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCargo" layoutX="215.0" layoutY="312.0" prefHeight="25.0" prefWidth="184.0" promptText="Cargo">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Button fx:id="ButtonVoltar" layoutX="144.0" layoutY="361.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #ce0018;" text="Voltar" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="144.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="38.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GERENTE" textAlignment="CENTER" wrappingWidth="137.09765625">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtLogin" cacheShape="false" layoutX="467.0" layoutY="278.0" prefHeight="25.0" prefWidth="137.0" promptText="Login" scaleShape="false">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="txtSenha" layoutX="467.0" layoutY="312.0" prefHeight="25.0" prefWidth="137.0" promptText="Senha">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="txtUsuario" layoutX="287.0" layoutY="278.0" prefHeight="25.0" prefWidth="110.0" promptText="Status de usuario">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="409.0" layoutY="281.0" text="Login :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="407.0" layoutY="315.0" text="Senha :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="161.0" layoutY="281.0" text="Status de Usuario :" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNome" cacheShape="false" layoutX="272.0" layoutY="34.0" prefHeight="25.0" prefWidth="321.0" promptText="Nome" scaleShape="false">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="txtCPF" layoutX="272.0" layoutY="78.0" prefHeight="25.0" prefWidth="159.0" promptText="CPF">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="txtIdade" layoutX="272.0" layoutY="116.0" prefHeight="25.0" prefWidth="159.0" promptText="Idade">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="txtStatusPessoa" layoutX="272.0" layoutY="197.0" prefHeight="25.0" prefWidth="159.0" promptText="status de Pessoa">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="217.0" layoutY="38.0" text="Nome :" textFill="#f2f0f0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="223.0" layoutY="82.0" text="CPF :" textFill="#f2ecec">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="218.0" layoutY="120.0" text="Idade :" textFill="#f2f2f2">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="167.0" layoutY="159.0" text="Tipo Sanguineo :" textFill="#fffefe">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="161.0" layoutY="201.0" text="Status de pessoa :" textFill="#fffefe">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="217.0" layoutY="240.0" text="Sexo :" textFill="#f5f2f2">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSanguineo" layoutX="274.0" layoutY="157.0" prefHeight="25.0" prefWidth="159.0" promptText="Tipo sanguineo" />
+      <TextField fx:id="txtSexo" layoutX="272.0" layoutY="240.0" prefHeight="25.0" prefWidth="159.0" promptText="Sexo" />
+      <Button fx:id="buttonLista" layoutX="583.0" layoutY="365.0" mnemonicParsing="false" onAction="#lista" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #ce0018;" text="Ver Lista" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="124.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

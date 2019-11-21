@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl"><name>reportsHospitalAdapter</name><driver>com.mysql.jdbc.Driver</driver><username>root</username><password></password><savePassword>true</savePassword><url>jdbc:mysql://localhost/hospital</url><database></database><serverAddress></serverAddress><classpath>C:\Users\jhona\Documents\Arquivos Eclipse\SistemaHospital\SistemaDesafioHospital\lib\mysql-connector-java-5.1.48\mysql-connector-java-5.1.48.jar</classpath></jdbcDataAdapter>
