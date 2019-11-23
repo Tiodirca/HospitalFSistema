@@ -7,7 +7,7 @@ public class Atendimento{
 	private int idAtendimento;
 	private String comentarioEnfermeiro;
 	private String comentarioMedico;
-	private Float peso;
+	private float peso;
 	private float altura;
 	private LocalDate data;
 	private String doenca;

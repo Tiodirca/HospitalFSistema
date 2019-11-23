@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 import br.com.hospitalif.DAO.EnfermeiroDAO;
 import br.com.hospitalif.controller.EnfermeiroControler;
 import br.com.hospitalif.model.Enfermeiro;
+import br.com.hospitalif.reports.PrintReport;
 import br.com.hospitalif.util.Rotas;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,6 +20,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import net.sf.jasperreports.engine.JRException;
 
 public class EnfermeiroLista extends EnfermeiroControler implements Initializable {
 
@@ -73,7 +75,19 @@ public class EnfermeiroLista extends EnfermeiroControler implements Initializabl
 
 	    @FXML
 	    void Relatorio(ActionEvent event) {
-
+	    	String rel = "reportEnfermeiro.jrxml";
+	    	try {
+				new PrintReport().showReport(rel);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (JRException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	    }
 	@FXML
     void Salvar(ActionEvent event) {
@@ -174,5 +188,6 @@ public class EnfermeiroLista extends EnfermeiroControler implements Initializabl
 		List<Enfermeiro> atendimentos = endao.select();
 		ObservableList<Enfermeiro> obsen = FXCollections.observableArrayList(atendimentos);
 		tabela.setItems(obsen);
+		areaEdicao.setVisible(false);
 	}
 }

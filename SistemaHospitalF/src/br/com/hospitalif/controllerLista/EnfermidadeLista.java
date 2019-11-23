@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 import br.com.hospitalif.DAO.EnfermidadeDAO;
 import br.com.hospitalif.controller.EnfermidadeControler;
 import br.com.hospitalif.model.Enfermidade;
+import br.com.hospitalif.reports.PrintReport;
 import br.com.hospitalif.util.Rotas;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,6 +22,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import net.sf.jasperreports.engine.JRException;
 
 public class EnfermidadeLista extends EnfermidadeControler implements Initializable {
 
@@ -64,7 +66,19 @@ public class EnfermidadeLista extends EnfermidadeControler implements Initializa
 
 	    @FXML
 	    void Relatorio(ActionEvent event) {
-
+	    	String rel = "reportEnfermidade.jrxml";
+	    	try {
+				new PrintReport().showReport(rel);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (JRException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	    }
 
 	@FXML

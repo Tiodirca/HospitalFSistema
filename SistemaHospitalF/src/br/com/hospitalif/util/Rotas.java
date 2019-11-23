@@ -1,6 +1,9 @@
 package br.com.hospitalif.util;
 
-public class Rotas {
+import br.com.hospitalif.reports.PrintReport;
+
+public class Rotas extends PrintReport{
+	private static final long serialVersionUID = 2878226524671144472L;
 	//tela com atributos de Pessoa e Funcionario
 	public static String Medico= "/view/MedicoFX.fxml";
 	//tela com atributos de Pessoa

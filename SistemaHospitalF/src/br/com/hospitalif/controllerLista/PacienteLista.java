@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 import br.com.hospitalif.DAO.PacienteDAO;
 import br.com.hospitalif.controller.PacienteControler;
 import br.com.hospitalif.model.Paciente;
+import br.com.hospitalif.reports.PrintReport;
 import br.com.hospitalif.util.Rotas;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,6 +20,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import net.sf.jasperreports.engine.JRException;
 
 public class PacienteLista extends PacienteControler implements Initializable {
 
@@ -66,7 +68,19 @@ public class PacienteLista extends PacienteControler implements Initializable {
 
 	    @FXML
 	    void Relatorio(ActionEvent event) {
-
+	    	String rel = "reportPaciente.jrxml";
+	    	try {
+				new PrintReport().showReport(rel);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (JRException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	    }
 
 	@FXML

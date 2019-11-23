@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 import br.com.hospitalif.DAO.AtendimentoDAO;
 import br.com.hospitalif.controller.AtendimentoControler;
 import br.com.hospitalif.model.Atendimento;
+import br.com.hospitalif.reports.PrintReport;
 import br.com.hospitalif.util.Rotas;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -24,6 +25,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import net.sf.jasperreports.engine.JRException;
 
 public class AtendimentoLista extends AtendimentoControler implements Initializable {
 
@@ -82,7 +84,19 @@ public class AtendimentoLista extends AtendimentoControler implements Initializa
 
 	    @FXML
 	    void Relatorio(ActionEvent event) {
-
+	    	String rel = "reportAtendimento.jrxml";
+	    	try {
+				new PrintReport().showReport(rel);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (JRException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	    }
 
 	@FXML
@@ -164,7 +178,6 @@ public class AtendimentoLista extends AtendimentoControler implements Initializa
 		doenca.setCellValueFactory(new PropertyValueFactory<>("doenca"));
 		AtendimentoDAO adao = new AtendimentoDAO();
 		List<Atendimento> atendimentos = adao.select();
-		System.out.println("Tamanho " + atendimentos.size());
 		ObservableList<Atendimento> itens = FXCollections.observableArrayList(atendimentos);
 		tabela.setItems(itens);
 		areaEdicao.setVisible(false);

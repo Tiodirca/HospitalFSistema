@@ -64,7 +64,7 @@ create table Gerente(
     cpf varchar(11),
     idade integer,
     tipoSanguineo varchar(10),
-    sexo varchar(10),
+    sexo varchar(100),
     statusPessoa varchar(100),
     login varchar(100),
     senha varchar(100),
@@ -114,7 +114,7 @@ create table Login(
     login varchar(100),
     senha varchar(100),
     constraint PK_Funcionario PRIMARY KEY(idLogin));
-    
+    /*
 select * From Medico;
 select * From Paciente;
 select * From Funcionario;
@@ -125,3 +125,4 @@ select * From Entrada;
 select * From EnfermidadePessoal;
 select * From Atendimento;
 select * From Enfermidade;
+*/
